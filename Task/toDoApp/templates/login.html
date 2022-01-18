@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            .box {
+                padding: 20px;
+                text-align: center;
+                background-color: aliceblue;
+                width:350px;
+                height:200px;
+                border-radius: 16px;
+                box-shadow: 2.5px 2.5px;
+                font-size: 16px;
+                font-family:'Courier New', Courier, monospace;
+            }
+            .button{
+                background-color: aliceblue;
+                border: none;
+                color: black;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 16px;
+                box-shadow: 1px 1px 1px 1px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+    <body style="background-color: #6666ff;">
+        <div class="box" style="margin-top: 30vh; margin-left: 70vh;">
+            <form action=" " method="POST">
+                {% csrf_token %}
+                {% for i in form %}
+                <section>
+                    {{ i.label }} <br>
+                    {{ i }} <br>
+                </section> <br>
+                {% endfor %}
+                <input type="submit" value="Submit" class="button">
+            </form>
+        </div>
+    </body>
+</html>

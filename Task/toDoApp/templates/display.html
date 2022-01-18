@@ -1,0 +1,54 @@
+<head>
+    <style>
+    .box {
+        padding-top: 20px;
+        text-align: center;
+        background-color: aliceblue;
+        width: 400px;
+        height: 150px;
+        border-radius: 4.5%;
+        box-shadow: 2.5px 2.5px;
+        font-size: 16px;
+        font-family:'Courier New', Courier, monospace;
+    }
+    .button{
+        background-color: aliceblue;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 16px;
+        box-shadow: 1px 1px 1px 1px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    </style>
+</head>
+
+<body style="background-color:#6666ff;">
+    {% for i in obj %}
+    <div class="box" style="text-align: left; margin-left: 20vh; margin-top: 8vh;">
+        <ol>
+            <li>
+                Task title : {{i.title}}
+            </li>
+            <li>
+                Task Priority : {{i.priority_order}}
+            </li>
+            <li>
+                Task description: {{i.description}}
+            </li>  
+        </ol> 
+        <div>
+            <button class="button" style="margin-left: 10vh;">
+                <a href="{% url 'update' i.id %}" style="text-decoration: none; color: black;"> Edit </a>
+            </button>
+            <button class="button" style="margin-left: 10vh;">
+                <a href="{% url 'delete' i.id %}" style="text-decoration: none; color: black;"> Delete </a>
+            </button>
+        </div>
+    </div>
+    {%  endfor %}   
+</body>

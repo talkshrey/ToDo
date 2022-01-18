@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            .box {
+                padding-top: 20px;
+                text-align: center;
+                background-color: aliceblue;
+                width: 350px;
+                height: 200px;
+                border-radius: 4.5%;
+                box-shadow: 2.5px 2.5px;
+                font-size: 16px;
+                font-family:'Courier New', Courier, monospace;
+            }
+            .button{
+                background-color: aliceblue;
+                border: none;
+                color: black;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 16px;
+                box-shadow: 1px 1px 1px 1px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .sub-head li {
+                padding-left: 1vh;
+                padding-right: 1vh;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+    <body style="background-color: #6666ff;">
+        <div style="text-align: center; margin-top: 30vh; margin-left: 70vh;" class="box">
+            <div style="font-size: larger;"> Welcome to my <br> To Do App </div> <br> <br>
+            <div style="text-align: right; padding-right: 30px; font-size: smaller;"> - A product by Shrey </div> <br>
+            <div style="list-style-type: none; display: flex; justify-content: space-evenly;"> 
+                <li> <a href="{% url 'login' %}" class="button"> Login </a> </li> 
+                <li> <a href="{% url 'signup' %}" class="button"> Signup </a> </li>
+            </div>
+        </div>
+    </body>
+</html>

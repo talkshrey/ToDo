@@ -1,0 +1,78 @@
+<head>
+    <style>
+    .box {
+        padding-top: 20px;
+        text-align: center;
+        background-color: aliceblue;
+        width: 400px;
+        height: 500px;
+        border-radius: 4.5%;
+        box-shadow: 2.5px 2.5px;
+        font-size: 16px;
+        font-family:'Courier New', Courier, monospace;
+    }
+    .button{
+        background-color: aliceblue;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 16px;
+        box-shadow: 1px 1px 1px 1px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    .nav-bar {
+        list-style-type: none;
+    }
+    </style>
+</head>
+
+<body style="background-color: #6666ff;">
+    <div style="display: flex; justify-content: end;">
+        <form action="" method="POST" style="justify-content: end; text-align: end;">
+            <div class="nav-bar">
+                <li> <img src="{{user.image.url}}" alt="default profile" width="20%"> </li>
+                <li> <a href="/logout" class="button"> Logout </a> </li>
+            </div>
+        </form>
+    </div>
+    <div style="margin-left: 72vh; margin-top: 5vh;" class="box">
+        <h3 style="font-family:'Courier New', Courier, monospace"> To Do App </h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label>Task title</label>
+            <div>
+                {{index.title}}
+            </div>
+            <br>
+            <label>Task description</label>
+            <div>
+                {{index.description}}
+            </div>
+            <br>
+            <label>Compulsory?</label>
+            <div>
+                {{index.compulsory}}
+            </div>
+            <br>
+            <label>Priority order</label>
+            <div>
+                {{index.priority_order}}
+            </div>
+            <br>
+            <button class="button">
+                Submit
+            </button>
+            <a href="/display" class="button" type="submit" style="font-size: 14;">Display</a>
+        </form>
+    </div>
+</body>

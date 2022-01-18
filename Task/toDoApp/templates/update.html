@@ -1,0 +1,28 @@
+<div style="margin-left: 50vh; margin-top: 20vh;">
+    <h3 style="font-family:Arial, Helvetica, sans-serif"> To Do App </h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label>Task title</label>
+        <div>
+            {{upload_form.title}}
+        </div>
+        <br>
+        <label>Task description</label>
+        <div>
+            {{upload_form.description}}
+        </div>
+        <br>
+        <label>Compulsory?</label>
+        <div>
+            {{upload_form.compulsory}}
+        </div>
+        <br>
+        <label>Priority order</label>
+        <div>
+            {{upload_form.priority_order}}
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</div>
